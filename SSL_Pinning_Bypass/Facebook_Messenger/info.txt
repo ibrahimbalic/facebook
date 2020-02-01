@@ -1,0 +1,6 @@
+1) adb install Messenger_v248.0.0.7.127_86.apk
+2) start messenger app
+3) adb pull /data/data/com.facebook.orca/lib-xzs/libcoldstart.so libcoldstart.so.original
+4) open with hex editor: libcoldstart.so.original
+5) change to this offset 00947673 : 84 => 85
+6) adb push libcoldstart.so.original /data/data/com.facebook.orca/lib-xzs/libcoldstart.so
