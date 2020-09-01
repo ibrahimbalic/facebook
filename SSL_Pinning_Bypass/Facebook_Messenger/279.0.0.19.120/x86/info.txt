@@ -1,0 +1,13 @@
+
+adb install base.apk
+start messenger app 
+adb root
+adb push libcoldstart.so.patch /data/data/com.facebook.orca/lib-xzs/libcoldstart.so
+
+requires:
+Burp V1.7.36
+Java Runtime 11+ (for TLS1.3)
+
+
+Offset:
+0087C63E: 85 => 84
