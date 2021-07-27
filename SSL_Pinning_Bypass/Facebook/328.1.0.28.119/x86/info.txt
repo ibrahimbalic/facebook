@@ -1,0 +1,6 @@
+1) adb install facebook_v328.1.0.28.119.apk
+2) start messenger app
+3) adb pull /data/data/com.facebook.katana/lib-compressed/libcoldstart.so libcoldstart.so.original
+4) open with hex editor: libcoldstart.so.original
+5) change to this offset 00AE1474 : 85 => 84
+6) adb push libcoldstart.so.original /data/data/com.facebook.katana/lib-compressed/libcoldstart.so
